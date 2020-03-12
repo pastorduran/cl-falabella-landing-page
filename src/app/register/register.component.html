@@ -1,0 +1,87 @@
+<nav class="navbar navbar-collapse navbar-light bg-light">
+    <div class="d-none d-sm-block">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-7 clearfix">
+        <a class="navbar-brand visible-xs hidden-sm hidden-md hidden-lg" href="#"><img src="../assets/img/logo-banco-falabella.png" alt="logo banco"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </div>
+</nav>
+<section class="view background-img">
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="md-2 pt-lg-5">
+                <h2 class="account-title">Tu cuenta Corriente</h2>
+                <h1 class="account-title">100% on line</h1>
+            </div>
+        </div>
+        <div class="row no-gutters align-items-lg-center">
+
+            <div class="col-xs-12 col-sm-4 col-md-7 pt-lg-5 d-none d-sm-none d-md-none d-md-block d-sm-block">
+                <div class="card-group">
+                    <div class="card flex-row flex-wrap border-0">
+                        <div class="card-body border-0">
+                            <img src="../assets/img/ico-cmr.png" class="card-img-overlay" alt="...">
+                        </div>
+                        <div class="card-body px-6 pt-lg-4">
+                            <h6 class="card-text">Acumula</h6>
+                            <h6 class="card-text">CMR Puntos</h6>
+                        </div>
+                    </div>
+                    <div class="card flex-row border-0">
+                        <div class="card-body">
+                            <img src="../assets/img/opu.png" class="card-img-overlay" width="96" alt="...">
+                        </div>
+                        <div class="card-body px-6 pt-lg-4">
+                            <h6 class="card-text">Descuentos</h6>
+                            <p class="card-text">Exclusivos</p>
+                        </div>
+                    </div>
+                    <div class="card flex-row border-0">
+                        <div class="card-body">
+                            <img src="../assets/img/visa-blue-png-2.png" class="card-img-overlay ml-0 pt-lg-5" width="82" alt="...">
+                        </div>
+                        <div class="card-body px-6 pt-lg-4">
+                            <h6 class="card-text">Compra</h6>
+                            <p class="card-text">En todo el mundo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-4">
+                <div class="card_register">
+                    <div class="card">
+                        <div class="card-body">
+                            <form [formGroup]="formGroup">
+                                <h1 class="h3 mb-3 font-weight-light" style="color: #00943e;">Ingresa tus datos</h1>
+                                <p>Solo necesitas tener tu cédula para realizar la solicitud</p>
+                                <div class="form-group">
+                                    <label>Rut</label>
+                                    <input type="text" formControlName="rut" class="form-control" placeholder="Ej: 11.111.111-1">
+                                    <span>{{ getError('rut')}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Celular</label>
+                                    <input type="text" formControlName="phone" class="form-control" placeholder="Ej: 987654321">
+                                    <span>{{ getError('phone')}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Correo electrónico</label>
+                                    <input type="text" formControlName="email" class="form-control" placeholder="Ej: correo@correo.cl">
+                                    <span>{{ getError('email')}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <button [disabled]="formGroup.invalid" (click)="redirect()" class="btn btn-success btn-block">Continuar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

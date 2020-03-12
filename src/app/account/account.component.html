@@ -1,0 +1,45 @@
+<router-outlet></router-outlet>
+<nav class="navbar navbar-collapse navbar-light bg-light">
+    <div class="d-none d-sm-block">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-7 clearfix">
+        <a class="navbar-brand visible-xs hidden-sm hidden-md hidden-lg" href="#"><img src="../assets/img/logo-banco-falabella.png" alt="logo banco"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </div>
+</nav>
+<section class="view background-renta">
+    <div class="container">
+        <div class="row no-gutters align-items-lg-center">
+
+            <div class="col-xs-12 col-sm-4 col-md-7 pt-lg-5 d-none d-sm-none d-md-none d-md-block d-sm-block">
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-4 pt-lg-5">
+                <div class="card_register">
+                    <div class="card">
+                        <div class="card-body">
+                            <form [formGroup]="accountFormGroup">
+                                <h1 class="h3 mb-3 font-weight-light" style="color: #00943e;">Ayudanos con unos datos mas</h1>
+                                <br>
+                                <p>Porque te queremos dar una oferta hecha a la medida para tí, necesitamos saber un poco más </p>
+                                <br>
+                                <div class="form-group">
+                                    <label>¿Cuál es tu renta líquida/ingreso mensual</label>
+                                    <input type="text" formControlName="netSalary" class="form-control" placeholder="Ej: $400.000">
+                                    <span>{{ getError('netSalary')}}</span>
+                                </div>
+                                <div class="form-group">
+                                    <button [disabled]="accountFormGroup.invalid" (click)="saveAccount()" class="btn btn-success btn-block">Continuar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
