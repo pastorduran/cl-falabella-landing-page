@@ -4,10 +4,18 @@ Proyecto Angular para crear registro de clientes para cuenta corriente.  version
 
 ## Ejecutar
 
-ejecutar el comando  `npm start` ó  `ng serve --proxy-config proxy.config.json` luego abrir la aplicación desde la url: `http://localhost:4200/`. 
+Este proyecto puede ser iniciado de dos formas desde la consola. (Esto para evitar la validación de los encabezados CORS del API-REST )
+1. 
+```
+npm start
+```
+2. 
+```
+ng serve --proxy-config proxy.config.json
+```
+
+luego abrir la aplicación desde la url: `http://localhost:4200/`. 
 
 ## Construir proyecto
-
-run
 
 ejecutar `ng build` para construir el proyecto.
