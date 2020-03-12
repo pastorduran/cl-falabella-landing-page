@@ -28,6 +28,11 @@ export class AccountComponent implements OnInit {
     const formObj = this.accountFormGroup.value;
     this.clientService.setNetSalary(formObj.netSalary);
     this.clientService.createAccount(this.clientService.getLocalClient()).subscribe(res => {
+      if(res.internalCode === 200){
+        this.buildForm();
+        this.clientService.cleanClient();        
+        this.router.navigateByUrl('');
+      }
       console.log(res);
     });
   }

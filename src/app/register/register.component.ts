@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
   public redirect() {
     const client = this.formGroup.value;
     this.clientService.setDataCliente(client.rut, client.email, client.phone);
+    this.buildForm();
     this.router.navigateByUrl('/renta');
   }
 
