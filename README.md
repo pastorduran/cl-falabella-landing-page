@@ -4,7 +4,7 @@ Proyecto Angular para crear registro de clientes para cuenta corriente.  version
 
 ## Ejecutar
 
-ejecutar  `ng serve` luego abrir la aplicación desde la url: `http://localhost:4200/`. 
+ejecutar  `npm start` luego abrir la aplicación desde la url: `http://localhost:4200/`. 
 
 ## Construir proyecto
 

@@ -38,7 +38,7 @@ export class ClientService {
 
   public createAccount(client : Client): Observable<ResponseModel> {
     const data = {'rut' : client.rut, 'email' : client.email, 'phone' : client.phone, 'netSalary' : client.netSalary};
-    return this.http.post<ResponseModel>(this.baseUrl + '/cl/falabella/save-account', data)
+    return this.http.post<ResponseModel>('/cl/falabella/save-account', data)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
